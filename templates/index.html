@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Patient Entry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f8fb;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        label {
+            font-weight: bold;
+            color: #34495e;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #219150;
+        }
+
+        .link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Patient Receipt Form</h1>
+        <form method="POST">
+            <label>Patient Name:</label>
+            <input type="text" name="name" placeholder="Enter patient's name" required>
+
+            <label>Age:</label>
+            <input type="number" name="age" min="0" placeholder="Enter age" required>
+
+            <label>Disease:</label>
+            <select name="disease" required>
+                <option value="">Select Disease</option>
+                <option value="Flu">Flu</option>
+                <option value="Cold">Cold</option>
+                <option value="COVID-19">COVID-19</option>
+                <option value="Malaria">Malaria</option>
+                <option value="Dengue">Dengue</option>
+            </select>
+
+            <button type="submit">Save Receipt</button>
+        </form>
+
+        <a class="link" href="/analysis">View Today's Disease Analysis</a>
+    </div>
+</body>
+</html>
